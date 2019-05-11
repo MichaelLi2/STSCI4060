@@ -1,0 +1,147 @@
+STSCI 4060 HW1
+Name: Michael Li
+NetID: mjl257
+
+****** Question 1 ********
+
+This program is to manipulate a string using a format string, string methods, and a tuple.
+
+A. Define a string variable, story, to hold the content of the story including its layout.
+
+Once upon a time, deep in an ancient
+jungle, there lived a tiger. This tiger
+liked to eat fish, but the jungle had
+very little fish to offer. One day, an
+explorer found the tiger and discovered
+it liked fish. The explorer took the
+tiger back to NYC, where it could
+eat as much fish as it wanted. However,
+the tiger became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of fish.
+
+-- The End of the Story --
+
+B. Change the content of the story into a format string by replacing the
+words "tiger" and "fish" with a format symbol with the replace() string method.
+
+Once upon a time, deep in an ancient
+jungle, there lived a %s. This %s
+liked to eat %s, but the jungle had
+very little %s to offer. One day, an
+explorer found the %s and discovered
+it liked %s. The explorer took the
+%s back to NYC, where it could
+eat as much %s as it wanted. However,
+the %s became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of %s.
+
+-- The End of the Story --
+
+C. Create a tuple called "t1" to hold the words of "tiger" and "fish" so
+that the tuple can be used to restore the story to its original condition by using a
+string format operator (%).
+
+Once upon a time, deep in an ancient
+jungle, there lived a tiger. This tiger
+liked to eat fish, but the jungle had
+very little fish to offer. One day, an
+explorer found the tiger and discovered
+it liked fish. The explorer took the
+tiger back to NYC, where it could
+eat as much fish as it wanted. However,
+the tiger became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of fish.
+
+-- The End of the Story --
+
+D. Now programmatically create a different version of the story by changing
+the animal and its food from "tiger" and "fish" to "monkey" and "bananas".
+
+Once upon a time, deep in an ancient
+jungle, there lived a monkey. This monkey
+liked to eat bananas, but the jungle had
+very little bananas to offer. One day, an
+explorer found the monkey and discovered
+it liked bananas. The explorer took the
+monkey back to NYC, where it could
+eat as much bananas as it wanted. However,
+the monkey became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of bananas.
+
+-- The End of the Story --
+
+****** Question 2 ********
+
+This program is to manipulate a string using a format string and dictionary.
+
+A. Using the replace() method, replace the word "monkey" with "%(animal)s", "bananas" with
+"%(food)s", and NYC with "%(city)s".
+
+Once upon a time, deep in an ancient
+jungle, there lived a %(animal)s. This %(animal)s
+liked to eat %(food)s, but the jungle had
+very little %(food)s to offer. One day, an
+explorer found the %(animal)s and discovered
+it liked %(food)s. The explorer took the
+%(animal)s back to %(city)s, where it could
+eat as much %(food)s as it wanted. However,
+the %(animal)s became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of %(food)s.
+
+-- The End of the Story --
+
+B. Define a dictionary, myDict, to hold the following keys and values. The
+keys are animal, food, and city and the values are cat, mice and Beijing respectively.
+Then, use the string format operator and apply the dictionary to the format string.
+
+The dictionary is:
+{'food': 'mice', 'city': 'Beijing', 'animal': 'cat'}
+
+Once upon a time, deep in an ancient
+jungle, there lived a cat. This cat
+liked to eat mice, but the jungle had
+very little mice to offer. One day, an
+explorer found the cat and discovered
+it liked mice. The explorer took the
+cat back to Beijing, where it could
+eat as much mice as it wanted. However,
+the cat became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of mice.
+
+-- The End of the Story --
+
+C. Using assignment statements ONLY, update the dictionary values with the
+values of "fox", "rabbits", and "London" respectively
+
+The dictionary is:
+{'food': 'rabbits', 'city': 'London', 'animal': 'fox'}
+
+Once upon a time, deep in an ancient
+jungle, there lived a fox. This fox
+liked to eat rabbits, but the jungle had
+very little rabbits to offer. One day, an
+explorer found the fox and discovered
+it liked rabbits. The explorer took the
+fox back to London, where it could
+eat as much rabbits as it wanted. However,
+the fox became homesick, so the
+explorer brought it back to the jungle,
+leaving a large supply of rabbits.
+
+-- The End of the Story --
+
+****** Question 3 ********
+
+This program is to calculate the dot product of two vectors
+
+The list representation of vector u is:
+[[10], [-2], [3], [44]]
+The list representation of vector v is:
+[[20], [3], [-2], [11]]
+The dot product of u and v is: 672

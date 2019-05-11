@@ -1,0 +1,145 @@
+Michaels-MacBook-Pro:HW3 michaelli$ python
+Python 2.7.10 (default, Feb  7 2017, 00:08:15) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import grocery
+>>> Wegmans = grocery.Grocery()
+>>> Wegmans.viewInventory()
+The inventory is empty. Put an order ASAP.
+
+>>> Wegmans.buildInventory({ \
+... "APPLE" : [30,0.49], \
+... "BANANA" : [40,0.25], \
+... "MILK" : [20,2.99], \
+... "CHEESE" : [15,3.99], \
+... "BROCCOLI" : [25,0.99], \
+... "POTATO" : [45,0.75], \
+... "CHICKEN" : [5,5.49], \
+... "BEEF" : [4,6.25], \
+... "TUNA" : [3,18.99], \
+... "PASTA" : [20,0.99]})
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [30, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [20, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [5, 5.49], 'PASTA': [20, 0.99], 'TUNA': [3, 18.99], 'BROCCOLI': [25, 0.99]}
+
+>>> Wegmans.checkOut()
+Do you want to buy something? yes
+Enter an item to buy: APPLE
+How many do you want? 5
+Do you still want to buy something? Yes
+Enter an item to buy: MILK
+How many do you want? 2
+Do you still want to buy something? y
+Enter an item to buy: CHICKEN
+How many do you want? 3
+Do you still want to buy something? no
+Item		Quantity	Price	Subtotal
+-------------------------------------
+CHICKEN		3		5.49	16.47
+APPLE		5		0.49	2.45
+MILK		2		2.99	5.98
+-------------------------------------
+Please pay $24.9
+
+Goodbye.	Mon Mar 11 23:37:51 2019
+
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [25, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [18, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [2, 5.49], 'PASTA': [20, 0.99], 'TUNA': [3, 18.99], 'BROCCOLI': [25, 0.99]}
+
+>>> Wegmans.checkOut()
+Do you want to buy something? Y
+Enter an item to buy: WATERMELON
+Wrong item name or out of stock.
+Do you still want to buy something? No
+Item		Quantity	Price	Subtotal
+-------------------------------------
+Goodbye.	Mon Mar 11 23:38:29 2019
+
+>>> exit()
+Michaels-MacBook-Pro:HW3 michaelli$ python
+Python 2.7.10 (default, Feb  7 2017, 00:08:15) 
+[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.34)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import grocery
+>>> Wegmans = grocery.Grocery()
+>>> Wegmans.viewInventory()
+The inventory is empty. Put an order ASAP.
+
+>>> Wegmans.buildInventory({ \
+... "APPLE" : [30,0.49], \
+... "BANANA" : [40,0.25], \
+... "MILK" : [20,2.99], \
+... "CHEESE" : [15,3.99], \
+... "BROCCOLI" : [25,0.99], \
+... "POTATO" : [45,0.75], \
+... "CHICKEN" : [5,5.49], \
+... "BEEF" : [4,6.25], \
+... "TUNA" : [3,18.99], \
+... "PASTA" : [20,0.99]})
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [30, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [20, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [5, 5.49], 'PASTA': [20, 0.99], 'TUNA': [3, 18.99], 'BROCCOLI': [25, 0.99]}
+
+>>> Wegmans.checkOut()
+Do you want to buy something? yes
+Enter an item to buy: APPLE
+How many do you want? 5
+Do you still want to buy something? Yes
+Enter an item to buy: CHICKEN
+How many do you want? 3
+Do you still want to buy something? y
+Enter an item to buy: MILK
+How many do you want? 2
+Do you still want to buy something? no
+
+Item		Quantity	Price	Subtotal
+-------------------------------------
+CHICKEN		3		5.49	16.47
+APPLE		5		0.49	2.45
+MILK		2		2.99	5.98
+-------------------------------------
+Please pay $24.9
+
+Goodbye.	Mon Mar 11 23:41:32 2019
+
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [25, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [18, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [2, 5.49], 'PASTA': [20, 0.99], 'TUNA': [3, 18.99], 'BROCCOLI': [25, 0.99]}
+
+>>> Wegmans.checkOut()
+Do you want to buy something? Y
+Enter an item to buy: WATERMELON
+Wrong item name or out of stock.
+Do you still want to buy something? No
+
+Item		Quantity	Price	Subtotal
+-------------------------------------
+Goodbye.	Mon Mar 11 23:41:58 2019
+
+>>> Wegmans.checkOut()
+Do you want to buy something? y
+Enter an item to buy: TUNA
+How many do you want? 4
+Not enough in stock; we can only sell you 3 item(s).
+Do you still want to buy something? yes
+Enter an item to buy: TUNA
+How many do you want? 3
+Do you still want to buy something? Y
+Enter an item to buy: TUNA
+Wrong item name or out of stock.
+Do you still want to buy something? n
+
+Item		Quantity	Price	Subtotal
+-------------------------------------
+TUNA		3		18.99	56.97
+-------------------------------------
+Please pay $56.97
+
+Goodbye.	Mon Mar 11 23:43:09 2019
+
+>>> Wegmans.buildInventory({"TUNA" : [5,18.99]})
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [25, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [18, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [2, 5.49], 'PASTA': [20, 0.99], 'TUNA': [5, 18.99], 'BROCCOLI': [25, 0.99]}
+
+>>> Wegmans.buildInventory({"RICE" : [20,1.99]})
+>>> Wegmans.viewInventory()
+{'CHEESE': [15, 3.99], 'APPLE': [25, 0.49], 'BEEF': [4, 6.25], 'POTATO': [45, 0.75], 'MILK': [18, 2.99], 'BANANA': [40, 0.25], 'CHICKEN': [2, 5.49], 'PASTA': [20, 0.99], 'TUNA': [5, 18.99], 'RICE': [20, 1.99], 'BROCCOLI': [25, 0.99]}
+
+>>> 
